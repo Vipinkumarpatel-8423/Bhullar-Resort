@@ -1,4 +1,4 @@
-import Service1 from "../assets/opera/opera-Ballroom.png";
+import Service1 from "../assets/opera/opera-ballroom.png";
 import Service2 from "../assets/opera/Food.png";
 import Service3 from "../assets/opera/Amenities.png";
 import Service4 from "../assets/opera/wedding-set.png";
