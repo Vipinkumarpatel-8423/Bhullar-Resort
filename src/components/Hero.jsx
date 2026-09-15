@@ -64,7 +64,7 @@ const Hero = () => {
               <span className="h-px w-10 bg-[#c9a66b]" />
 
               <span className="text-[11px] font-medium uppercase tracking-[3px] text-[#d7b77c]">
-                Bhullar Resort
+                Opulence Resorts
               </span>
             </div>
 
@@ -139,7 +139,7 @@ const Hero = () => {
                 />
 
                 {/* Location */}
-                <div className="relative">
+                {/* <div className="relative">
                   <select
                     name="location"
                     value={formData.location}
@@ -162,7 +162,7 @@ const Hero = () => {
                     size={16}
                     className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
                   />
-                </div>
+                </div> */}
 
                 {/* Date */}
                 <div className="relative">
@@ -191,7 +191,8 @@ const Hero = () => {
                     className="h-11 w-full appearance-none rounded-none border border-transparent bg-[#f5f5f4] px-3 pr-10 text-[13px] text-gray-500 outline-none transition focus:border-[#c49a5a] focus:bg-white"
                   >
                     <option value="">
-                      Service looking for*
+                      {/* Select your Event  */}
+                      Event Type
                     </option>
                     <option value="Wedding">
                       Wedding
@@ -229,7 +230,7 @@ const Hero = () => {
                     className="h-11 w-full appearance-none rounded-none border border-transparent bg-[#f5f5f4] px-3 pr-10 text-[13px] text-gray-500 outline-none transition focus:border-[#c49a5a] focus:bg-white"
                   >
                     <option value="">
-                      Venue requirement*
+                      No. Of Guets 
                     </option>
                     <option value="Banquet Hall">
                       Banquet Hall
@@ -266,7 +267,7 @@ const Hero = () => {
                   type="submit"
                   className="mt-1 flex h-12 w-full items-center justify-center bg-[#b8833f] px-4 text-[12px] font-semibold uppercase tracking-[1px] text-white transition duration-300 hover:bg-[#9d6d31]"
                 >
-                  Connect With Our Experts
+                  Connect With Our Team
                 </button>
               </form>
             </div>

@@ -15,7 +15,8 @@ const Footer = () => {
   const quickLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/" },
-    { name: "Services", href: "/" },
+    // { name: "Services", href: "/" },
+    {name:"Weddings" , href:"/"},
     { name: "Gallery", href: "/" },
     { name: "Contact", href: "/" },
   ];
@@ -81,7 +82,7 @@ const Footer = () => {
             <div>
               <a href="/" className="inline-block">
                 <div className="font-serif text-[36px] tracking-[-1px] text-[#d0ad70]">
-                  Bhullar
+                  Opulence
                   <span className="text-white">.</span>
                 </div>
 
@@ -244,10 +245,10 @@ const Footer = () => {
                     </p>
 
                     <a
-                      href="mailto:info@bhullarresort.com"
+                      href="mailto:info@Opulenceresort.com"
                       className="break-all text-[13px] text-white/65 transition hover:text-[#c6a36a]"
                     >
-                      info@bhullarresort.com
+                      info@Opulenceresort.com
                     </a>
                   </div>
                 </div>
@@ -264,7 +265,7 @@ const Footer = () => {
         <div className="mx-auto flex min-h-[64px] max-w-[1400px] flex-col items-center justify-center gap-2 px-5 text-center sm:flex-row sm:justify-between sm:px-8 lg:px-12">
 
           <p className="text-[11px] font-medium text-[#191817] sm:text-[12px]">
-            © {new Date().getFullYear()} Bhullar Resort. All Rights Reserved.
+            © {new Date().getFullYear()} Opulence Resort. All Rights Reserved.
           </p>
 
           <div className="flex items-center gap-4 text-[10px] font-medium uppercase tracking-[1px] text-[#191817]/70">

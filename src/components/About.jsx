@@ -1,10 +1,9 @@
 import {
   ArrowUpRight,
-  MapPin,
-  Phone,
   Sparkles,
 } from "lucide-react";
 import AboutImage from "../assets/bhullar-about.jpg";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -24,7 +23,7 @@ const About = () => {
             <div className="relative overflow-hidden rounded-sm">
               <img
                 src={AboutImage}
-                alt="Bhullar Resort Banquet Hall"
+                alt=" Opulence Resorts"
                 className="h-[420px] w-full object-cover sm:h-[500px] lg:h-[580px]"
               />
 
@@ -65,7 +64,7 @@ const About = () => {
               <span className="h-px w-10 bg-[#b58a4a]" />
 
               <span className="text-[11px] font-semibold uppercase tracking-[3px] text-[#a17b45]">
-                Welcome to Bhullar Resort
+                Welcome to Opulence Resorts
               </span>
             </div>
 
@@ -81,23 +80,23 @@ const About = () => {
             <div className="mt-7 max-w-[620px] space-y-4 text-[14px] leading-7 text-[#6e685f] sm:text-[15px]">
               <p>
                 Welcome to <strong className="font-medium text-[#3d3831]">
-                  Bhullar Resort
+                   Opulence Resorts
                 </strong>
-                , a banquet hall destination in Punjab where
+                , a banquet hall destination in Zirakpur where
                 celebrations come together with elegance, comfort
                 and memorable experiences.
               </p>
 
               <p>
                 Whether you are planning a wedding, reception,
-                engagement or a special celebration, Bhullar Resort
+                engagement or a special celebration, Opulence Resorts
                 offers a welcoming space to make your important
                 occasions truly special.
               </p>
             </div>
 
             {/* Features */}
-            <div className="mt-8 grid grid-cols-1 gap-4 border-y border-[#ded7cb] py-6 sm:grid-cols-2">
+            {/* <div className="mt-8 grid grid-cols-1 gap-4 border-y border-[#ded7cb] py-6 sm:grid-cols-2">
 
               <div className="flex items-start gap-3">
                 <div className="mt-1 h-7 w-7 shrink-0 border border-[#c7a66d]">
@@ -106,7 +105,7 @@ const About = () => {
 
                 <div>
                   <h3 className="font-serif text-[18px] text-[#302b25]">
-                    Elegant Celebrations
+                    OPERA 
                   </h3>
 
                   <p className="mt-1 text-[12px] leading-5 text-[#777067]">
@@ -122,7 +121,7 @@ const About = () => {
 
                 <div>
                   <h3 className="font-serif text-[18px] text-[#302b25]">
-                    Banquet Venue
+                   OPULENCE
                   </h3>
 
                   <p className="mt-1 text-[12px] leading-5 text-[#777067]">
@@ -131,57 +130,79 @@ const About = () => {
                 </div>
               </div>
 
-            </div>
-
-            {/* Contact Details */}
-            {/* <div className="mt-7 space-y-4">
-
-              
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-[#d5c09d] bg-[#f1eadf]">
-                  <MapPin
-                    size={18}
-                    strokeWidth={1.5}
-                    className="text-[#a77d42]"
-                  />
-                </div>
-
-                <div>
-                  <p className="mb-1 text-[10px] font-semibold uppercase tracking-[2px] text-[#9a794c]">
-                    Visit Us
-                  </p>
-
-                  <p className="max-w-[430px] text-[13px] leading-6 text-[#5f5951]">
-                    Zirakpur, Nabha, Punjab 140603
-                  </p>
-                </div>
-              </div>
-
-              
-              <div className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-[#d5c09d] bg-[#f1eadf]">
-                  <Phone
-                    size={17}
-                    strokeWidth={1.5}
-                    className="text-[#a77d42]"
-                  />
-                </div>
-
-                <div>
-                  <p className="mb-1 text-[10px] font-semibold uppercase tracking-[2px] text-[#9a794c]">
-                    Call Us
-                  </p>
-
-                  <a
-                    href="tel:06284315908"
-                    className="text-[13px] text-[#5f5951] transition hover:text-[#a77d42]"
-                  >
-                    06284 315 908
-                  </a>
-                </div>
-              </div>
-
             </div> */}
+
+            {/* Resorts */}
+<div className="mt-8 grid grid-cols-1 gap-4 border-y border-[#ded7cb] py-6 sm:grid-cols-2">
+
+  {/* OPERA */}
+  <Link
+    to="/resorts/opera"
+    className="group flex items-start gap-3 transition-all duration-300"
+  >
+    <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center border border-[#c7a66d] transition-all duration-300 group-hover:bg-[#b58a4a]">
+      <span className="h-px w-3 bg-[#b58a4a] transition-colors duration-300 group-hover:bg-white" />
+    </div>
+
+    <div>
+      <div className="flex items-center gap-2">
+        <h3 className="font-serif text-[20px] text-[#302b25] transition-colors duration-300 group-hover:text-[#b58a4a]">
+          OPERA
+        </h3>
+
+        <ArrowUpRight
+          size={16}
+          className="text-[#b58a4a] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+        />
+      </div>
+
+      <p className="mt-1 text-[12px] leading-5 text-[#777067]">
+        Discover Opera, an elegant destination for memorable
+        weddings and celebrations.
+      </p>
+
+      <span className="mt-2 inline-block text-[10px] font-semibold uppercase tracking-[1.5px] text-[#a17b45]">
+        Explore Opera
+      </span>
+    </div>
+  </Link>
+
+
+  {/* OPULENCE */}
+  <Link
+    to="/resorts/opulence"
+    className="group flex items-start gap-3 transition-all duration-300"
+  >
+    <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center border border-[#c7a66d] transition-all duration-300 group-hover:bg-[#b58a4a]">
+      <span className="h-px w-3 bg-[#b58a4a] transition-colors duration-300 group-hover:bg-white" />
+    </div>
+
+    <div>
+      <div className="flex items-center gap-2">
+        <h3 className="font-serif text-[20px] text-[#302b25] transition-colors duration-300 group-hover:text-[#b58a4a]">
+          OPULENCE
+        </h3>
+
+        <ArrowUpRight
+          size={16}
+          className="text-[#b58a4a] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+        />
+      </div>
+
+      <p className="mt-1 text-[12px] leading-5 text-[#777067]">
+        Experience Opulence, a sophisticated venue created for
+        grand celebrations and special occasions.
+      </p>
+
+      <span className="mt-2 inline-block text-[10px] font-semibold uppercase tracking-[1.5px] text-[#a17b45]">
+        Explore Opulence
+      </span>
+    </div>
+  </Link>
+
+</div>
+
+           
 
             {/* CTA */}
             <div className="mt-8">
