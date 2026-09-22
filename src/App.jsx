@@ -7,6 +7,11 @@ import Hero from "./components/Hero";
 
 import Opera from "./pages/Opera";
 import Opulence from "./pages/Opulence";
+// import Weddings from "./components/Weddings";
+// import Gallery from "./components/Gallery";
+import Contact from "./components/Contact";
+import LocationSection from "./components/LocationSection";
+
 
 
 function Home() {
@@ -16,6 +21,11 @@ function Home() {
         <Hero />
         <About />
         {/* <Services /> */}
+        {/* <Weddings /> */}
+        {/* <Gallery /> */}
+        <Contact/>
+        <LocationSection />
+
       </main>
     </>
   );

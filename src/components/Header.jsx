@@ -8,11 +8,11 @@ const Header = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: "Home", href: "/#home" },
+    { name: "Home", href: "/" },
     { name: "About", href: "/#about" },
     // { name: "Services", href: "/#services" },
-    { name: "Weddings", href: "/#weddings" },
-    { name: "Gallery", href: "/#gallery" },
+    // { name: "Weddings", href: "/#weddings" },
+    // { name: "Gallery", href: "/#gallery" },
     { name: "Contact", href: "/#contact" },
   ];
 
@@ -40,7 +40,7 @@ const Header = () => {
 
         {/* Logo */}
         <a
-          href="/#home"
+          href="/"
           className="group flex items-center gap-2"
         >
           <div className="leading-none">
@@ -86,19 +86,21 @@ const Header = () => {
         </nav>
 
         {/* CTA */}
-        <div className="hidden lg:block">
-          <a
-            href="/#contact"
-            className="group flex items-center gap-2 border border-[#b18a4a] bg-[#b18a4a] px-5 py-3 text-[12px] font-semibold uppercase tracking-[1.5px] text-white transition-all duration-300 hover:bg-[#9b753c]"
-          >
-            Book Your Event
+       <div className="hidden lg:block">
+  <a
+    href="https://wa.me/916284315908"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group flex items-center gap-2 border border-[#b18a4a] bg-[#b18a4a] px-5 py-3 text-[12px] font-semibold uppercase tracking-[1.5px] text-white transition-all duration-300 hover:bg-[#9b753c]"
+  >
+    Book Your Event
 
-            <ArrowUpRight
-              size={15}
-              className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
-          </a>
-        </div>
+    <ArrowUpRight
+      size={15}
+      className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+    />
+  </a>
+</div>
 
         {/* Mobile Button */}
         <button
