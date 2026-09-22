@@ -262,26 +262,45 @@ const Footer = () => {
 
       {/* ================= BOTTOM BAR ================= */}
       <div className="border-t border-white/10 bg-[#c9a56a]">
-        <div className="mx-auto flex min-h-[64px] max-w-[1400px] flex-col items-center justify-center gap-2 px-5 text-center sm:flex-row sm:justify-between sm:px-8 lg:px-12">
+  <div className="mx-auto flex min-h-[64px] max-w-[1400px] flex-col items-center justify-center gap-2 px-5 text-center sm:flex-row sm:justify-between sm:px-8 lg:px-12">
 
-          <p className="text-[11px] font-medium text-[#191817] sm:text-[12px]">
-            © {new Date().getFullYear()} Opulence Resort. All Rights Reserved.
-          </p>
+    <p className="text-[11px] font-medium text-[#191817] sm:text-[12px]">
+      © {new Date().getFullYear()} Opulence Resort. All Rights Reserved.
+    </p>
 
-          <div className="flex items-center gap-4 text-[10px] font-medium uppercase tracking-[1px] text-[#191817]/70">
-            <a href="#" className="transition hover:text-[#191817]">
-              Privacy Policy
-            </a>
+    <div className="flex items-center gap-4 text-[10px] font-medium uppercase tracking-[1px] text-[#191817]/70">
 
-            <span className="h-3 w-px bg-[#191817]/30" />
+      <a
+        href="#"
+        className="transition hover:text-[#191817]"
+      >
+        Privacy Policy
+      </a>
 
-            <a href="#" className="transition hover:text-[#191817]">
-              Terms & Conditions
-            </a>
-          </div>
+      <span className="h-3 w-px bg-[#191817]/30" />
 
-        </div>
-      </div>
+      <a
+        href="#"
+        className="transition hover:text-[#191817]"
+      >
+        Terms & Conditions
+      </a>
+
+      <span className="h-3 w-px bg-[#191817]/30" />
+
+      <a
+        href="https://ymorinnovation.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="transition hover:text-[#191817]"
+      >
+        YMOR INNOVATION
+      </a>
+
+    </div>
+
+  </div>
+</div>
 
     </footer>
   );
