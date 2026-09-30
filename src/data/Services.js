@@ -1,7 +1,7 @@
 import Service1 from "../assets/opera/opera-ballroom.png";
 import Service2 from "../assets/opera/Food.png";
 import Service3 from "../assets/opera/Amenities.png";
-import Service4 from "../assets/opera/wedding-set.png";
+// import Service4 from "../assets/opera/wedding-set.png";
 // import Service5 from "../assets/services/Service-5.webp";
 // import Service6 from "../assets/services/Service-6.webp";
 // import Service7 from "../assets/services/Service-7.webp";
@@ -16,13 +16,13 @@ const Services = [
       "An architectural marvel spread across 18,000 sq. ft., our signature pillarless grand hall offers an unobstructed, majestic view from every angle. Designed to comfortably host sophisticated gatherings of 100 to 300 guests, the venue features an iconic, theatrical 60 ft. stage and multiple curated pre-function spaces, ensuring your celebration feels expansive and visually stunning.",
     image: Service1,
   },
-   {
-    id: 4,
-    title: "Engagement & Roka",
-    description:
-      "An intimate and elegant setting for your engagement, roka and other beautiful family occasions.",
-    image: Service4,
-  },
+  //  {
+  //   id: 4,
+  //   title: "Engagement & Roka",
+  //   description:
+  //     "An intimate and elegant setting for your engagement, roka and other beautiful family occasions.",
+  //   image: Service4,
+  // },
 
   {
     id: 2,
