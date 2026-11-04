@@ -50,129 +50,6 @@ const About = () => {
             </div>
           </div>
 
-          {/* ================= CONTENT SIDE ================= */}
-          {/* <div className="lg:pl-2">
-
-              <div className="mb-5 flex items-center gap-3">
-                <span className="h-px w-10 bg-[#b58a4a]" />
-
-                <span className="text-[11px] font-semibold uppercase tracking-[3px] text-[#a17b45]">
-                  Welcome to Opulence Resorts
-                </span>
-              </div>
-
-              <h2 className="max-w-[650px] font-serif text-[40px] leading-[1.08] tracking-[-1px] text-[#28241f] sm:text-[48px] md:text-[54px] lg:text-[58px]">
-                A beautiful setting for
-                <span className="block italic text-[#b58a4a]">
-                  your special moments.
-                </span>
-              </h2>
-
-              <div className="mt-7 max-w-[620px] space-y-4 text-[14px] leading-7 text-[#6e685f] sm:text-[15px]">
-                <p>
-                  Welcome to <strong className="font-medium text-[#3d3831]">
-                    Opulence Resorts
-                  </strong>
-                  , a banquet hall destination in Zirakpur where
-                  celebrations come together with elegance, comfort
-                  and memorable experiences.
-                </p>
-
-                <p>
-                  Whether you are planning a wedding, reception,
-                  engagement or a special celebration, Opulence Resorts
-                  offers a welcoming space to make your important
-                  occasions truly special.
-                </p>
-              </div>
-
-            
-
-  <div className="mt-8 grid grid-cols-1 gap-4 border-y border-[#ded7cb] py-6 sm:grid-cols-2">
-
-    <Link
-      to="/resorts/opera"
-      className="group flex items-start gap-3 transition-all duration-300"
-    >
-      <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center border border-[#c7a66d] transition-all duration-300 group-hover:bg-[#b58a4a]">
-        <span className="h-px w-3 bg-[#b58a4a] transition-colors duration-300 group-hover:bg-white" />
-      </div>
-
-      <div>
-        <div className="flex items-center gap-2">
-          <h3 className="font-serif text-[20px] text-[#302b25] transition-colors duration-300 group-hover:text-[#b58a4a]">
-            OPERA
-          </h3>
-
-          <ArrowUpRight
-            size={16}
-            className="text-[#b58a4a] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-          />
-        </div>
-
-        <p className="mt-1 text-[12px] leading-5 text-[#777067]">
-          Discover Opera, an elegant destination for memorable
-          weddings and celebrations.
-        </p>
-
-        <span className="mt-2 inline-block text-[10px] font-semibold uppercase tracking-[1.5px] text-[#a17b45]">
-          Explore Opera
-        </span>
-      </div>
-    </Link>
-
-
-    <Link
-      to="/resorts/opulence"
-      className="group flex items-start gap-3 transition-all duration-300"
-    >
-      <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center border border-[#c7a66d] transition-all duration-300 group-hover:bg-[#b58a4a]">
-        <span className="h-px w-3 bg-[#b58a4a] transition-colors duration-300 group-hover:bg-white" />
-      </div>
-
-      <div>
-        <div className="flex items-center gap-2">
-          <h3 className="font-serif text-[20px] text-[#302b25] transition-colors duration-300 group-hover:text-[#b58a4a]">
-            OPULENCE
-          </h3>
-
-          <ArrowUpRight
-            size={16}
-            className="text-[#b58a4a] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-          />
-        </div>
-
-        <p className="mt-1 text-[12px] leading-5 text-[#777067]">
-          Experience Opulence, a sophisticated venue created for
-          grand celebrations and special occasions.
-        </p>
-
-        <span className="mt-2 inline-block text-[10px] font-semibold uppercase tracking-[1.5px] text-[#a17b45]">
-          Explore Opulence
-        </span>
-      </div>
-    </Link>
-
-  </div>
-
-            
-
-              <div className="mt-8">
-                <a
-                  href="#contact"
-                  className="group inline-flex items-center gap-3 bg-[#b58a4a] px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[1.5px] text-white transition duration-300 hover:bg-[#9c733c]"
-                >
-                  Plan Your Celebration
-
-                  <ArrowUpRight
-                    size={16}
-                    className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                  />
-                </a>
-              </div>
-
-            </div> */}
-
           <div className="lg:pl-2">
             {/* Small Heading */}
             <div className="mb-5 flex items-center gap-3">
@@ -221,70 +98,119 @@ const About = () => {
             </div>
 
             {/* Resorts */}
-            <div className="mt-8 grid grid-cols-1 gap-4 border-y border-[#ded7cb] py-6 sm:grid-cols-2">
-              {/* OPERA */}
-              <Link
-                to="/resorts/opera"
-                className="group flex items-start gap-3 transition-all duration-300"
-              >
-                <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center border border-[#c7a66d] transition-all duration-300 group-hover:bg-[#b58a4a]">
-                  <span className="h-px w-3 bg-[#b58a4a] transition-colors duration-300 group-hover:bg-white" />
-                </div>
 
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h3 className="font-serif text-[20px] text-[#302b25] transition-colors duration-300 group-hover:text-[#b58a4a]">
-                      OPERA
-                    </h3>
+            {/* PREMIUM RESORT SHOWCASE */}
 
-                    <ArrowUpRight
-                      size={16}
-                      className="text-[#b58a4a] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                    />
+            <div className="mt-9 border-y border-[#ded7cb] py-7">
+              {/* Section Heading */}
+
+              <div className="mb-5">
+                <span className="text-[10px] font-semibold uppercase tracking-[2.5px] text-[#a17b45]">
+                  Our Exclusive Venues
+                </span>
+
+                <h3 className="mt-1 font-serif text-[25px] text-[#302b25]">
+                  Explore Our Resorts
+                </h3>
+              </div>
+
+              {/* Resort Cards */}
+
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                {/* OPERA CARD */}
+
+                <Link
+                  to="/resorts/opera"
+                  className="group relative overflow-hidden border border-[#d8c4a2] bg-[#fffdf9] p-5 transition-all duration-500 hover:-translate-y-1 hover:border-[#b58a4a] hover:shadow-[0_12px_30px_rgba(181,138,74,0.13)] sm:p-5"
+                >
+                  {/* Gold Accent */}
+
+                  <div className="absolute left-0 top-0 h-full w-[3px] bg-[#b58a4a] transition-all duration-500 group-hover:w-1.5" />
+
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <span className="text-[9px] font-semibold uppercase tracking-[2.5px] text-[#a17b45]">
+                        Elegant Celebrations
+                      </span>
+
+                      <h3 className="mt-2 font-serif text-[26px] tracking-wide text-[#302b25] transition-colors duration-300 group-hover:text-[#a17b45]">
+                        OPERA
+                      </h3>
+
+                      <div className="mt-2 h-px w-10 bg-[#c5a064] transition-all duration-500 group-hover:w-16" />
+                    </div>
+
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-[#d8c4a2] text-[#b58a4a] transition-all duration-300 group-hover:border-[#b58a4a] group-hover:bg-[#b58a4a] group-hover:text-white">
+                      <ArrowUpRight
+                        size={19}
+                        className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                      />
+                    </div>
                   </div>
 
-                  <p className="mt-1 text-[12px] leading-5 text-[#777067]">
+                  <p className="mt-4 text-[12px] leading-6 text-[#777067]">
                     Discover Opera, an elegant destination for memorable
                     weddings and celebrations.
                   </p>
 
-                  <span className="mt-2 inline-block text-[10px] font-semibold uppercase tracking-[1.5px] text-[#a17b45]">
-                    Explore Opera
-                  </span>
-                </div>
-              </Link>
+                  <div className="mt-5 flex items-center justify-between border-t border-[#e9e0d3] pt-3">
+                    <span className="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#a17b45]">
+                      Explore Opera
+                    </span>
 
-              {/* OPULENCE */}
-              <Link
-                to="/resorts/opulence"
-                className="group flex items-start gap-3 transition-all duration-300"
-              >
-                <div className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center border border-[#c7a66d] transition-all duration-300 group-hover:bg-[#b58a4a]">
-                  <span className="h-px w-3 bg-[#b58a4a] transition-colors duration-300 group-hover:bg-white" />
-                </div>
+                    <span className="text-lg text-[#b58a4a] transition-transform duration-300 group-hover:translate-x-2">
+                      →
+                    </span>
+                  </div>
+                </Link>
 
-                <div>
-                  <div className="flex items-center gap-2">
-                    <h3 className="font-serif text-[20px] text-[#302b25] transition-colors duration-300 group-hover:text-[#b58a4a]">
-                      OPULENCE
-                    </h3>
+                {/* OPULENCE CARD */}
 
-                    <ArrowUpRight
-                      size={16}
-                      className="text-[#b58a4a] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
-                    />
+                <Link
+                  to="/resorts/opulence"
+                  className="group relative overflow-hidden border border-[#d8c4a2] bg-[#fffdf9] p-5 transition-all duration-500 hover:-translate-y-1 hover:border-[#b58a4a] hover:shadow-[0_12px_30px_rgba(181,138,74,0.13)] sm:p-5"
+                >
+                  {/* Gold Accent */}
+
+                  <div className="absolute left-0 top-0 h-full w-[3px] bg-[#b58a4a] transition-all duration-500 group-hover:w-1.5" />
+
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <span className="text-[9px] font-semibold uppercase tracking-[2.5px] text-[#a17b45]">
+                        Grand Celebrations
+                      </span>
+
+                      <h3 className="mt-2 font-serif text-[26px] tracking-wide text-[#302b25] transition-colors duration-300 group-hover:text-[#a17b45]">
+                        OPULENCE
+                      </h3>
+
+                      <div className="mt-2 h-px w-10 bg-[#c5a064] transition-all duration-500 group-hover:w-16" />
+                    </div>
+
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center border border-[#d8c4a2] text-[#b58a4a] transition-all duration-300 group-hover:border-[#b58a4a] group-hover:bg-[#b58a4a] group-hover:text-white">
+                      <ArrowUpRight
+                        size={19}
+                        className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                      />
+                    </div>
                   </div>
 
-                  <p className="mt-1 text-[12px] leading-5 text-[#777067]">
+                  <p className="mt-4 text-[12px] leading-6 text-[#777067]">
                     Experience Opulence, a sophisticated venue created for grand
                     celebrations and special occasions.
                   </p>
 
-                  <span className="mt-2 inline-block text-[10px] font-semibold uppercase tracking-[1.5px] text-[#a17b45]">
-                    Explore Opulence
-                  </span>
-                </div>
-              </Link>
+                  <div className="mt-5 flex items-center justify-between border-t border-[#e9e0d3] pt-3">
+                    <span className="text-[10px] font-semibold uppercase tracking-[1.7px] text-[#a17b45]">
+                      Explore Opulence
+                    </span>
+
+                    <span className="text-lg text-[#b58a4a] transition-transform duration-300 group-hover:translate-x-2">
+                      →
+                    </span>
+                  </div>
+                </Link>
+              </div>
             </div>
 
             {/* CTA */}

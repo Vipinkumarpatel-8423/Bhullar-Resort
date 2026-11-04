@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { useLocation } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,11 +10,11 @@ const Header = () => {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/#about" },
+    { name: "About", href: "/about" },
     // { name: "Services", href: "/#services" },
     // { name: "Weddings", href: "/#weddings" },
     // { name: "Gallery", href: "/#gallery" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Contact", href: "/contact" },
   ];
 
   // Check which link is currently active

@@ -41,8 +41,17 @@ const Contact = () => {
                   className="group flex items-center gap-2 text-sm text-white/75 transition-colors hover:text-[#c9a96b]"
                 >
                   <Phone size={15} className="text-[#b18a4a]" />
-                  06284 315 908
+                  +91 6284315908
                 </a>
+
+                <a
+                  href="tel:+919888779138"
+                  className="group flex items-center gap-2 text-sm text-white/75 transition-colors hover:text-[#c9a96b]"
+                >
+                  <Phone size={15} className="text-[#b18a4a]" />
+                   +91 9888779138
+                </a>
+
 
                 <a
                   href="mailto:info@opulenceresorts.com"
@@ -57,7 +66,7 @@ const Contact = () => {
                     size={15}
                     className="mt-0.5 shrink-0 text-[#b18a4a]"
                   />
-                  <span>Zirakpur, Nabha, Punjab 140603</span>
+                  <span>Zirakpur Patiala Road Nabha Punjab 140603</span>
                 </div>
               </div>
             </div>

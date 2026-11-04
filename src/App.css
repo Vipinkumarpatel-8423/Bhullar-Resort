@@ -1,1 +1,232 @@
 @import "tailwindcss";
+
+
+
+/* Hero Form Entrance Animation */
+
+@keyframes heroFormEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-form-enter {
+  animation: heroFormEnter 0.9s ease-out both;
+}
+
+/* Input Focus Animation */
+
+.hero-input {
+  transition: all 0.3s ease;
+}
+
+.hero-input:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(196, 154, 90, 0.10);
+}
+
+/* Submit Button */
+
+.hero-submit {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-submit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(255,255,255,0.18),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.hero-submit:hover::before {
+  left: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-form-enter {
+    animation: none;
+  }
+
+  .hero-input,
+  .hero-submit,
+  .hero-submit::before {
+    transition: none;
+  }
+}
+
+
+
+
+/* =================================
+   HERO GLASS FORM
+================================= */
+
+.hero-glass-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.22),
+    rgba(80, 48, 25, 0.38),
+    rgba(255, 255, 255, 0.12)
+  );
+
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+
+  border: 1px solid rgba(255, 255, 255, 0.38);
+
+  box-shadow:
+    0 0 15px rgba(255, 220, 160, 0.15),
+    0 15px 50px rgba(0, 0, 0, 0.3);
+
+  animation: heroGlassEnter 0.9s ease-out both;
+}
+
+/* FORM ENTRANCE */
+
+@keyframes heroGlassEnter {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =================================
+   TRANSPARENT INPUT FIELDS
+================================= */
+
+.hero-glass-input {
+  width: 100%;
+  height: 52px;
+
+  padding: 0 15px;
+
+  border-radius: 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.48);
+
+  background: rgba(255, 255, 255, 0.14);
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition: all 0.3s ease;
+}
+
+.hero-glass-input::placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-glass-input:focus {
+  background: rgba(255, 255, 255, 0.24);
+
+  border-color: #e5c27e;
+
+  box-shadow: 0 0 12px rgba(229, 194, 126, 0.25);
+
+  transform: translateY(-1px);
+}
+
+.hero-glass-input option {
+  background: #ffffff;
+  color: #292016;
+}
+
+.hero-date-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* =================================
+   GOLD SUBMIT BUTTON
+================================= */
+
+.hero-glass-button {
+  background: linear-gradient(
+    135deg,
+    #e4b65f,
+    #b17a30,
+    #d5a64d
+  );
+
+  border: 1px solid rgba(255, 231, 177, 0.6);
+
+  box-shadow: 0 5px 20px rgba(177, 122, 48, 0.3);
+
+  transition: all 0.35s ease;
+}
+
+.hero-glass-button:hover {
+  background: linear-gradient(
+    135deg,
+    #f0c979,
+    #c18a3c,
+    #e0b35d
+  );
+
+  box-shadow: 0 8px 28px rgba(220, 174, 91, 0.4);
+
+  transform: translateY(-2px);
+}
+
+.hero-glass-button:active {
+  transform: scale(0.98);
+}
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 640px) {
+
+  .hero-glass-card {
+    border-radius: 17px;
+    padding: 20px;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  }
+
+  .hero-glass-input {
+    height: 48px;
+    font-size: 12px;
+  }
+
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-glass-card {
+    animation: none;
+  }
+
+  .hero-glass-input,
+  .hero-glass-button {
+    transition: none;
+  }
+
+}

@@ -1,9 +1,11 @@
+
 import { useState } from "react";
 import {
   CalendarDays,
   ChevronDown,
   MessageCircle,
 } from "lucide-react";
+
 
 const Hero = () => {
   const [formData, setFormData] = useState({
@@ -28,95 +30,162 @@ const Hero = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("Enquiry:", formData);
+    const message = `
+Hello Opulence Resorts!
 
-    // API / EmailJS / WhatsApp integration yahan add kar sakte ho
+I would like to enquire about an event.
+
+Name: ${formData.name}
+Mobile Number: ${formData.mobile}
+Event Date: ${formData.date}
+Event Type: ${formData.service}
+No. Of Guests / Venue: ${formData.venue}
+WhatsApp Updates: ${formData.whatsapp ? "Yes" : "No"}
+
+Please contact me with further details.
+
+Thank you!
+    `.trim();
+
+    const whatsappURL = `https://wa.me/916284315908?text=${encodeURIComponent(
+      message
+    )}`;
+
+    window.open(whatsappURL, "_blank", "noopener,noreferrer");
   };
 
   return (
     <section
       id="home"
-      className="relative min-h-[760px] overflow-hidden bg-[#f8f5ef]"
+      className="relative isolate flex min-h-[760px] w-full items-center overflow-hidden bg-[#24190f] lg:min-h-[760px]"
     >
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('../assets/banner.webp')",
-        }}
-      />
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/65" />
+      {/* BACKGROUND VIDEO */}
 
-      {/* Extra Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/25" />
+      {/* <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        className="absolute inset-0 -z-20 h-full w-full object-cover"
+        style={{ objectPosition: "center center" }}
+      >
+        <source src={heroVideo} type="video/mp4" />
+      </video> */}
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto flex min-h-[760px] max-w-[1400px] items-center px-5 py-24 sm:px-8 lg:px-12">
-        <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_390px] xl:grid-cols-[1fr_420px]">
+       <video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+  className="absolute inset-0 -z-20 h-full w-full object-cover"
+>
+  <source
+    src="https://res.cloudinary.com/dw9uxx5n6/video/upload/v1793772150/hero-background_-_Trim.mp4"
+    type="video/mp4"
+  />
+</video>
+
+      {/* CINEMATIC OVERLAY */}
+
+      <div className="absolute inset-0 -z-10 bg-black/40" />
+
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/65 via-black/25 to-black/20" />
+
+      {/* MAIN CONTENT */}
+
+      <div className="relative z-10 mx-auto w-full max-w-[1500px] px-5 py-16 sm:px-8 md:py-20 lg:px-12 lg:py-14">
+
+        <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_500px] xl:gap-16">
 
           {/* LEFT CONTENT */}
-          <div className="max-w-[700px] pt-8 lg:pt-0">
 
-            {/* Small Label */}
-            <div className="mb-5 flex items-center gap-3">
-              <span className="h-px w-10 bg-[#c9a66b]" />
+          <div className="max-w-[780px] text-white">
 
-              <span className="text-[11px] font-medium uppercase tracking-[3px] text-[#d7b77c]">
+            {/* BRAND LABEL */}
+
+            <div className="mb-6 flex items-center gap-3">
+              <span className="h-[1px] w-10 bg-[#d5ad62]" />
+
+              <span className="text-[11px] font-semibold uppercase tracking-[3px] text-[#dfbd78] sm:text-xs">
                 Opulence Resorts
               </span>
             </div>
 
-            {/* Heading */}
-            <h1 className="max-w-[680px] font-serif text-[46px] leading-[1.02] tracking-[-1px] text-white sm:text-[58px] md:text-[68px] lg:text-[72px] xl:text-[82px]">
+            {/* HEADING */}
+
+            <h1 className="font-serif text-[45px] leading-[1.04] tracking-[-1.5px] sm:text-[58px] md:text-[68px] lg:text-[66px] xl:text-[82px]">
               Your perfect day,
+
               <br />
 
               <span className="italic text-[#d5b274]">
-                beautifully celebrated.
+                beautifully
+                <br className="hidden sm:block" />
+                celebrated.
               </span>
             </h1>
 
-            {/* Description */}
-            <p className="mt-7 max-w-[590px] text-[15px] leading-7 text-white/85 sm:text-[16px]">
+            {/* DESCRIPTION */}
+
+            <p className="mt-7 max-w-[650px] text-[14px] leading-7 text-white/90 sm:text-[15px] sm:leading-8 md:text-base">
               A luxurious destination for weddings, celebrations and
               unforgettable moments — where every detail is designed
               to make your special day truly memorable.
             </p>
 
-            {/* Bottom Info */}
-            <div className="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4 text-xs uppercase tracking-[1.5px] text-white/70">
+            {/* BOTTOM INFO */}
+
+            <div className="mt-9 flex flex-wrap items-center gap-x-5 gap-y-3 text-[11px] uppercase tracking-[1.5px] text-white/80 sm:gap-x-8 sm:text-xs">
+
               <span>Weddings</span>
-              <span className="h-1 w-1 rounded-full bg-[#c9a66b]" />
+
+              <span className="h-1 w-1 rounded-full bg-[#d5b274]" />
+
               <span>Banquets</span>
-              <span className="h-1 w-1 rounded-full bg-[#c9a66b]" />
+
+              <span className="h-1 w-1 rounded-full bg-[#d5b274]" />
+
               <span>Celebrations</span>
+
             </div>
+
           </div>
 
-          {/* RIGHT FORM */}
-          <div className="w-full">
-            <div className="rounded-2xl bg-white p-5 shadow-2xl sm:p-6 md:p-7">
+          {/* RIGHT GLASS FORM */}
 
-              {/* Form Header */}
-              <div className="mb-5">
-                <h2 className="font-serif text-[26px] text-[#24211d]">
+          <div className="w-full">
+
+            <div className="hero-glass-card rounded-[22px] border border-white/35 p-5 shadow-[0_15px_60px_rgba(0,0,0,0.35)] backdrop-blur-2xl sm:p-7 md:p-8">
+
+              {/* FORM HEADER */}
+
+              <div className="mb-6">
+
+                <h2 className="font-serif text-[28px] font-semibold text-white sm:text-[34px]">
                   Let's Connect!
                 </h2>
 
-                <p className="mt-1 text-[11px] leading-5 text-gray-500">
+                <p className="mt-2 max-w-[440px] text-[12px] leading-6 text-white/85 sm:text-[13px]">
                   Tell us about your event and let our team help
                   you plan a celebration that's truly special.
                 </p>
+
+                <div className="mt-4 h-[3px] w-16 rounded-full bg-[#d5ad62]" />
+
               </div>
+
+              {/* FORM */}
 
               <form
                 onSubmit={handleSubmit}
-                className="space-y-2.5"
+                className="space-y-3"
               >
 
-                {/* Name */}
+                {/* NAME */}
+
                 <input
                   type="text"
                   name="name"
@@ -124,10 +193,12 @@ const Hero = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="h-11 w-full rounded-none border border-transparent bg-[#f5f5f4] px-3 text-[13px] text-gray-700 outline-none transition focus:border-[#c49a5a] focus:bg-white"
+                  autoComplete="name"
+                  className="hero-glass-input"
                 />
 
-                {/* Mobile */}
+                {/* MOBILE */}
+
                 <input
                   type="tel"
                   name="mobile"
@@ -135,150 +206,160 @@ const Hero = () => {
                   value={formData.mobile}
                   onChange={handleChange}
                   required
-                  className="h-11 w-full rounded-none border border-transparent bg-[#f5f5f4] px-3 text-[13px] text-gray-700 outline-none transition focus:border-[#c49a5a] focus:bg-white"
+                  autoComplete="tel"
+                  pattern="[0-9+\-\s()]{10,15}"
+                  title="Please enter a valid mobile number"
+                  className="hero-glass-input"
                 />
 
-                {/* Location */}
-                {/* <div className="relative">
-                  <select
-                    name="location"
-                    value={formData.location}
-                    onChange={handleChange}
-                    required
-                    className="h-11 w-full appearance-none rounded-none border border-transparent bg-[#f5f5f4] px-3 pr-10 text-[13px] text-gray-500 outline-none transition focus:border-[#c49a5a] focus:bg-white"
-                  >
-                    <option value="">
-                      Location of your event*
-                    </option>
-                    <option value="Bhullar Resort">
-                      Bhullar Resort
-                    </option>
-                    <option value="Other">
-                      Other Location
-                    </option>
-                  </select>
+                {/* DATE */}
 
-                  <ChevronDown
-                    size={16}
-                    className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
-                  />
-                </div> */}
-
-                {/* Date */}
                 <div className="relative">
+
                   <input
                     type="date"
                     name="date"
                     value={formData.date}
                     onChange={handleChange}
                     required
-                    className="h-11 w-full rounded-none border border-transparent bg-[#f5f5f4] px-3 pr-10 text-[13px] text-gray-500 outline-none transition focus:border-[#c49a5a] focus:bg-white"
+                    className="hero-glass-input hero-date-input"
                   />
 
                   <CalendarDays
-                    size={17}
-                    className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
+                    size={18}
+                    className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white"
                   />
+
                 </div>
 
-                {/* Service */}
+                {/* EVENT TYPE */}
+
                 <div className="relative">
+
                   <select
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
                     required
-                    className="h-11 w-full appearance-none rounded-none border border-transparent bg-[#f5f5f4] px-3 pr-10 text-[13px] text-gray-500 outline-none transition focus:border-[#c49a5a] focus:bg-white"
+                    className="hero-glass-input appearance-none pr-12"
                   >
-                    <option value="">
-                      {/* Select your Event  */}
+                    <option value="" className="text-black">
                       Event Type
                     </option>
-                    <option value="Wedding">
+
+                    <option value="Wedding" className="text-black">
                       Wedding
                     </option>
-                    <option value="Reception">
+
+                    <option value="Reception" className="text-black">
                       Reception
                     </option>
-                    <option value="Engagement">
+
+                    <option value="Engagement" className="text-black">
                       Engagement
                     </option>
-                    <option value="Birthday">
+
+                    <option value="Birthday" className="text-black">
                       Birthday Party
                     </option>
-                    <option value="Corporate">
+
+                    <option value="Corporate" className="text-black">
                       Corporate Event
                     </option>
-                    <option value="Other">
+
+                    <option value="Other" className="text-black">
                       Other Event
                     </option>
+
                   </select>
 
                   <ChevronDown
-                    size={16}
-                    className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
+                    size={18}
+                    className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white"
                   />
+
                 </div>
 
-                {/* Venue */}
+                {/* VENUE */}
+
                 <div className="relative">
+
                   <select
                     name="venue"
                     value={formData.venue}
                     onChange={handleChange}
                     required
-                    className="h-11 w-full appearance-none rounded-none border border-transparent bg-[#f5f5f4] px-3 pr-10 text-[13px] text-gray-500 outline-none transition focus:border-[#c49a5a] focus:bg-white"
+                    className="hero-glass-input appearance-none pr-12"
                   >
-                    <option value="">
-                      No. Of Guets 
+
+                    <option value="" className="text-black">
+                      No. Of Guests
                     </option>
-                    <option value="Banquet Hall">
+
+                    <option value="Banquet Hall" className="text-black">
                       Banquet Hall
                     </option>
-                    <option value="Lawn">
+
+                    <option value="Lawn" className="text-black">
                       Lawn
                     </option>
-                    <option value="Both">
+
+                    <option value="Both" className="text-black">
                       Banquet + Lawn
                     </option>
+
                   </select>
 
                   <ChevronDown
-                    size={16}
-                    className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
+                    size={18}
+                    className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-white"
                   />
+
                 </div>
 
-                {/* WhatsApp */}
-                <label className="flex cursor-pointer items-center gap-2 py-1 text-[12px] text-gray-700">
+                {/* WHATSAPP CHECKBOX */}
+
+                <label className="flex cursor-pointer items-center gap-3 py-1 text-[12px] text-white/95 sm:text-[13px]">
+
                   <input
                     type="checkbox"
                     name="whatsapp"
                     checked={formData.whatsapp}
                     onChange={handleChange}
-                    className="h-4 w-4 accent-[#c49a5a]"
+                    className="h-[17px] w-[17px] cursor-pointer accent-[#d5ad62]"
                   />
 
                   Send updates on WhatsApp
+
                 </label>
 
-                {/* Submit */}
+                {/* SUBMIT BUTTON */}
+
                 <button
                   type="submit"
-                  className="mt-1 flex h-12 w-full items-center justify-center bg-[#b8833f] px-4 text-[12px] font-semibold uppercase tracking-[1px] text-white transition duration-300 hover:bg-[#9d6d31]"
+                  className="hero-glass-button group mt-2 flex h-[55px] w-full items-center justify-center gap-3 rounded-xl px-4 text-[11px] font-bold uppercase tracking-[1.5px] text-white sm:text-[12px]"
                 >
+
                   Connect With Our Team
+
+                  <span className="text-lg transition-transform duration-300 group-hover:translate-x-2">
+                    →
+                  </span>
+
                 </button>
+
               </form>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
 
-      {/* Bottom Ivory Shape */}
-      <div className="absolute bottom-0 left-0 z-20 h-16 w-full bg-[#f8f5ef] [clip-path:ellipse(72%_100%_at_50%_100%)] sm:h-20 md:h-24" />
+      {/* FLOATING WHATSAPP BUTTON */}
 
-      {/* WhatsApp Floating Button */}
       <a
         href="https://wa.me/916284315908"
         target="_blank"
@@ -288,6 +369,7 @@ const Hero = () => {
       >
         <MessageCircle size={27} fill="currentColor" />
       </a>
+
     </section>
   );
 };
